@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge AluraGeek</title>
+    <link
+      rel="icon"
+      href="./assets/images/icons/alura-logo.1720710819.svg"
+      type="image/svg+xml"
+    />
+    <script
+      src="https://kit.fontawesome.com/1f9c34aa5b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1>AluraGeek - Frutos Secos</h1>
+      </div>
+    </header>
+
+    <main>
+      <!-- Sección principal de productos -->
+      <section class="productos">
+        <h2>Mis Productos:</h2>
+        <div class="grid-productos">
+          <!-- Cada Producto -->
+          <article hidden class="producto-nuevo">
+            <img src="" alt="" />
+            <h3></h3>
+            <div class="precio">
+              <h5>Precio x Kg</h5>
+              <p></p>
+            </div>
+            <h4 hidden></h4>
+            <div class="botones">
+              <button class="editar" aria-label="Editar Producto">
+                <i class="fa-solid fa-pen-to-square"></i>
+              </button>
+              <button class="eliminar" aria-label="Eliminar Producto">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Sección secundaria para agregar productos -->
+      <aside class="agregar-producto">
+        <h2>Agregar Producto:</h2>
+        <form id="add-product-form">
+          <label for="nombre">Nombre del producto:</label>
+          <input type="text" id="nombre" placeholder="nombre..." required />
+
+          <label for="precio">Precio del producto:</label>
+          <input type="text" id="precio" placeholder="precio..." required />
+
+          <label for="imagen">URL de la imagen:</label>
+          <input type="text" id="imagen" placeholder="imagen..." required />
+
+          <input type="hidden" id="product-id" />
+
+          <div class="botones">
+            <button type="submit">Registrar</button>
+            <button type="reset">Limpiar</button>
+          </div>
+        </form>
+      </aside>
+
+      <!-- Modal -->
+      <div id="modal" class="modal" onclick="closeModal()">
+        <div class="modal-content">
+          <img id="modal-image" src="" alt="Producto" />
+          <h3 id="modal-title"></h3>
+          <p id="modal-price"></p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        ©Creado con 💖 por
+        <a
+          class="usuario"
+          href="https://github.com/EdwinCoder85"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span> EdwinCoder85 </span>
+          </a
+        >|| Todos los derechos reservados.<br />
+        ALURA LATAM - <span id="year"></span>
+      </p>
+    </footer>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
